@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "ngx-toastr/toastr";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-rgb: #14264c;
+  --secondary-rgb: #e8e8e8;
+  --gray-rgb: #979797;
+  --black-rgb: #000000;
+  --white-rgb: #ffffff;
+
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--secondary-rgb),
+      container-text-color: var(--black-rgb),
+    )
+  );
+
+  @include mat.sidenav-overrides(
+    (
+      container-background-color: var(--secondary-rgb),
+      container-text-color: var(--black-rgb),
+    )
+  );
+
+  @include mat.button-overrides(
+    (
+      filled-container-color: var(--secondary-rgb),
+      filled-label-text-color: var(--black-rgb),
+    )
+  );
+
+  @include mat.list-overrides(
+    (
+      active-indicator-color: var(--gray-rgb),
+      list-item-container-color: var(--secondary-rgb),
+    )
+  );
+}
+
+table {
+  width: 100%;
+}

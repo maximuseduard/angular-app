@@ -1,0 +1,35 @@
+<mat-card class="card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>Login</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form class="form" [formGroup]="loginForm">
+      <mat-form-field class="full-width-input">
+        <mat-label>E-mail</mat-label>
+        <input matInput autocomplete="email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field class="full-width-input">
+        <mat-label>Password</mat-label>
+        <input
+          matInput
+          autocomplete="current-password"
+          formControlName="password"
+          type="password"
+        />
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div class="actions">
+      <button mat-flat-button (click)="login()">Login</button>
+
+      <div class="signup">
+        <p>Don't have an account?</p>
+        <button mat-button>Sign up</button>
+      </div>
+    </div>
+  </mat-card-actions>
+</mat-card>
